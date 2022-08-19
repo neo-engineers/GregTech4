@@ -1,21 +1,19 @@
 package gregtechmod.loaders.postload;
 
-import java.lang.reflect.Field;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Map.Entry;
-
 import gregtechmod.api.GregTech_API;
 import gregtechmod.api.enums.GT_Items;
 import gregtechmod.api.util.GT_BaseCrop;
 import gregtechmod.api.util.GT_Log;
 import gregtechmod.api.util.GT_OreDictUnificator;
-
 import ic2.api.crops.CropCard;
-
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
+
+import java.lang.reflect.Field;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
 
 public class GT_CropLoader implements Runnable {
 	@Override
@@ -45,11 +43,11 @@ public class GT_CropLoader implements Runnable {
 	        GT_Log.log.info("Changing default IC2 crop loot");
 	        Map<CropCard, ItemStack> crops = new HashMap<>();
 	        
-	        crops.put(ic2.core.crop.IC2Crops.cropPlumbiscus	, GT_Items.Crop_Drop_Plumbilia	.get(1));
-	        crops.put(ic2.core.crop.IC2Crops.cropShining	, GT_Items.Crop_Drop_Argentia	.get(1));
-	        crops.put(ic2.core.crop.IC2Crops.cropFerru		, GT_Items.Crop_Drop_Ferru		.get(1));
-	        crops.put(ic2.core.crop.IC2Crops.cropAurelia	, GT_Items.Crop_Drop_Aurelia	.get(1));
-	        crops.put(ic2.core.crop.IC2Crops.cropCyprium	, GT_Items.Crop_Drop_Coppon		.get(1));
+	        //crops.put(ic2.core.block.crop.IC2Crops.cropPlumbiscus	, GT_Items.Crop_Drop_Plumbilia	.get(1));
+	        //crops.put(ic2.core.block.crop.IC2Crops.cropShining	, GT_Items.Crop_Drop_Argentia	.get(1));
+	        crops.put(ic2.core.block.crop.IC2Crops.cropFerru		, GT_Items.Crop_Drop_Ferru		.get(1));
+	        crops.put(ic2.core.block.crop.IC2Crops.cropAurelia	, GT_Items.Crop_Drop_Aurelia	.get(1));
+	        //crops.put(ic2.core.block.crop.IC2Crops.cropCyprium	, GT_Items.Crop_Drop_Coppon		.get(1));
 	         
 	        for (Entry<CropCard, ItemStack> entry : crops.entrySet()) {
 	        	try {
